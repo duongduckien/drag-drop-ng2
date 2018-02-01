@@ -17,6 +17,7 @@ export declare class DragulaService {
     add(name: string, drake: any): any;
     find(name: string): any;
     destroy(name: string): void;
+    destroyAll(): void;
     setOptions(name: string, options: any): void;
     private handleModels(name, drake);
     private setupEvents(bag);

@@ -56,6 +56,14 @@ var DragulaService = (function () {
         this.bags.splice(i, 1);
         bag.drake.destroy();
     };
+    DragulaService.prototype.destroyAll = function () {
+        if (this.bags.length > 0) {
+            for (var _k = 0; _k < this.bags.length; _k++) {
+                this.bags[_k].drake.destroy();
+            }
+            this.bags = [];
+        }
+    };
     DragulaService.prototype.setOptions = function (name, options) {
         options = {
             copy: true
